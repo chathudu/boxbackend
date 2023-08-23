@@ -43,6 +43,9 @@ app.listen(PORT, () => {
 
 //routes
 
+const availableRouter = require("./routes/available");
+app.use("/available", availableRouter);
+
 const mailRouter = require("./routes/route");
 app.use("/api", mailRouter);
 
